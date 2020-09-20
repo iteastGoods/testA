@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>嗨学登录认证-统一后台登录认证系统</title>
+    <link rel="stylesheet" href="../css/index.css" />
+</head>
+<body>
+<div class="container-all">
+    <div class="top">
+        <img src="../img/haixuelogo.png" class="company-logo" />
+        <h3 class="company">嗨学登录认证</h3>
+        <p class="system-name">为嗨学所有后端系统提供统一登录认证服务</p>
+    </div>
+    <div class="main">
+        <form id="login-form" method="post" action="/doLogin" onsubmit="return checkForm()">
+            <input type="hidden" id="redirect" name="redirect" />
+            <input type="text" class="log-input" name="username" id="username"
+                   placeholder="请输入用户名" />
+            <p id="name-err" class="err-tip"></p>
+            <input type="password" class="log-input" name="password"
+                   id="password" placeholder="请输入密码" />
+            <p id="pwd-err" class="err-tip"></p>
+
+            <div class="login-more">
+                <label class="log-automatic"> <input class="magic-checkbox"
+                                                     type="checkbox" name="isNextLoad" id="nextLoad" checked="true"
+                                                     value="true" /> <label for="nextLoad">自动登录</label>
+                </label>
+                <label class="forget-pwd">
+                    <a href="javascript:void(0);" id="find-pwd-a">找回密码</a>
+                </label>
+            </div>
+            <button id="login-submit" type="button" class="log-button">登&nbsp;录</button>
+        </form>
+    </div>
+    <div class="footer">
+        <p class="footer-text">
+            &nbsp;
+        </p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/layer/layer.js"></script>
+<script type="text/javascript" src="../js/jquery.hx.ajax.js"></script>
+<script type="text/javascript" src="../js/module/login.js"></script>
+</html>
